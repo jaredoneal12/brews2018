@@ -1,0 +1,27 @@
+header{
+    background-color: $main;
+    color:white;
+    overflow: auto;
+    padding:20px 15px;
+    .logo {float:left;
+    }
+    nav{
+        float:right;
+        a{
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 0px 15px;
+            color:white;
+            &:hover{
+                color: $dark-gray;
+            }
+            &.weekend-btn {
+                background-color: $dark-gray;
+                padding:10px 25px;
+                text-align: center;
+                color: white;
+                border-radius: 5px;
+            }
+        }
+    }
+}
