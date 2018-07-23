@@ -39,7 +39,7 @@ export default class Results extends Component {
     <section className="sortBar">
       <div className="sortOptions">
       <div className="options">
-      <select name="sortBy" className="sortBy">
+      <select name="sortBy" className="sortBy" onChange={this.props.change}>
       <option value="ABV-asc">High ABV</option>
       <option value="ABV-desc">Low ABV</option>
       </select>

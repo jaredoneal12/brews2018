@@ -17,13 +17,25 @@ class App extends Component {
       filteredData: beerData,
       breweryName: 'All',
       beerType: 'Any',
-      populateFormsData: ''
+      populateFormsData: '',
+      sortBy: 'ABV-desc'
 
      
     }
     this.change = this.change.bind(this)
     this.filteredData = this.filteredData.bind(this)
     this.populateForms = this.populateForms.bind(this)
+  }
+  componentWillMount(){
+
+    var beerData = this.state.beerData.sort((a,b) =>
+  {
+    return a.ABV - b.ABV
+  })
+
+    this.setState({
+      beerData
+    })
   }
   change(event){
     var name = event.target.name
@@ -50,6 +62,18 @@ class App extends Component {
  if(this.state.beerType != "Any"){
   returnedData = returnedData.filter((item) =>{
     return item.beerType == this.state.beerType
+  })
+}
+
+if(this.state.sortBy == 'ABV-desc') {
+  returnedData = returnedData.sort((a,b) =>{
+    return a.ABV - b.ABV 
+  })
+}
+
+if(this.state.sortBy == 'ABV-asc') {
+  returnedData = returnedData.sort((a,b) =>{
+    return b.ABV - a.ABV 
   })
 }
 
@@ -98,7 +122,7 @@ populateForms (){
       <Header />
       <section id="content">
         <Filter change={this.change} globalState={this.state} populateAction={this.populateForms}/>
-        <Results beerData={this.state.filteredData}/>
+        <Results beerData={this.state.filteredData} change={this.change}/>
         </section>
     </div>)
   }
