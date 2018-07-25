@@ -22,10 +22,17 @@ export default class Results extends Component {
       return (<div className="col-md-3" key={index}>
       <div className="beer">
           <div className="beerImg">
+            <img src={"../img/" + beer.breweryName + ".png"} />
         </div>
         <div className="bottom-info">
+          <div className="names">
         <span className="beerName">{beer.beerName}</span>
         <span className="breweryName">{beer.breweryName}</span>
+        </div>
+        <div className="stats">
+        <span className="ABVValue">ABV: {beer.ABV}%</span>
+        <span className="IBUValue">IBU :{beer.IBU}</span>
+        </div>
         </div>
       </div>
       </div>)
