@@ -13,18 +13,21 @@ class App extends Component {
       min_abv: 0,
       max_abv: 15,
       min_ibu: 0,
-      max_ibu: 100,
+      max_ibu: 120,
       filteredData: beerData,
       breweryName: 'All',
       beerType: 'Any',
       populateFormsData: '',
-      sortBy: 'ABV-desc'
+      sortBy: 'ABV-desc',
+      view: 'card',
+      search: ''
 
      
     }
     this.change = this.change.bind(this)
     this.filteredData = this.filteredData.bind(this)
     this.populateForms = this.populateForms.bind(this)
+    this.changeView = this.changeView.bind(this)
   }
   componentWillMount(){
 
@@ -45,12 +48,18 @@ class App extends Component {
       [name]:value
     }, () => {
       console.log(this.state)
-      this.filteredData()
     })
   }
+
+  changeView(viewName){
+    this.setState({
+      view: viewName
+    })
+  }
+
   filteredData(){
  var returnedData = this.state.beerData.filter((item) => {
-   return item.ABV >= this.state.min_abv && item.ABV <= this.state.max_abv && item.IBU <= this.state.max_ibu && item.IBU >= this.state.min_ibu
+   return (item.ABV >= this.state.min_abv && item.ABV <= this.state.max_abv) && (item.IBU >= this.state.min_ibu && item.IBU <= this.state.max_ibu)
  })
 
  if(this.state.breweryName != "All"){
@@ -82,6 +91,8 @@ if(this.state.sortBy == 'ABV-asc') {
  })
 
 }
+
+
 
 populateForms (){
   //beerType
@@ -122,7 +133,7 @@ populateForms (){
       <Header />
       <section id="content">
         <Filter change={this.change} globalState={this.state} populateAction={this.populateForms}/>
-        <Results beerData={this.state.filteredData} change={this.change}/>
+        <Results beerData={this.state.filteredData} change={this.change} globalState={this.state} changeView={this.changeView}/>
         </section>
     </div>)
   }

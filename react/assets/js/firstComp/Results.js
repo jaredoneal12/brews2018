@@ -6,7 +6,7 @@ export default class Results extends Component {
   constructor () {
     super()
     this.state = {
-      name: 'Joe'
+      
     }
     this.loopBeers =this.loopBeers.bind(this)
   }
@@ -19,29 +19,29 @@ export default class Results extends Component {
     }
 
     return beerData.map((beer, index) => { 
-      return (<div className="col-md-3" key={index}>
-      <div className="beer">
-          <div className="beerImg">
-            <img src={"../img/" + beer.breweryName + ".png"} />
+        return (<div className="col-md-3" key={index}>
+        <div className="beer">
+            <div className="beerImg">
+              <img src={"../img/" + beer.breweryName + ".png"} />
+          </div>
+          <div className="bottom-info">
+            <div className="names">
+          <span className="beerName">{beer.beerName}</span>
+          <span className="breweryName">{beer.breweryName}</span>
+          </div>
+          <div className="stats">
+          <span className="ABVValue">ABV: {beer.ABV}%</span>
+          <span className="IBUValue">IBU :{beer.IBU}</span>
+          </div>
+          </div>
         </div>
-        <div className="bottom-info">
-          <div className="names">
-        <span className="beerName">{beer.beerName}</span>
-        <span className="breweryName">{beer.breweryName}</span>
-        </div>
-        <div className="stats">
-        <span className="ABVValue">ABV: {beer.ABV}%</span>
-        <span className="IBUValue">IBU :{beer.IBU}</span>
-        </div>
-        </div>
-      </div>
-      </div>)
+        </div>)
     })
   }
   render () {
     return (<section id="results">
     <section className="searchBar">
-    <input type="text" name="search" placeholder="Search for a beer" />
+    <input type="text" name="search" placeholder="Search for a beer" onChange={this.props.change} />
     </section>
     <section className="sortBar">
       <div className="sortOptions">
@@ -52,8 +52,8 @@ export default class Results extends Component {
       </select>
       </div>
       <div className="view">
-      <i className="fa fa-th-list" aria-hidden="true"></i>
-      <i className="fa fa-th" aria-hidden="true"></i>
+      <i className="fa fa-th-list" aria-hidden="true" onClick={this.props.changeView.bind(null, "card")}></i>
+      <i className="fa fa-th" aria-hidden="true" onClick={this.props.changeView.bind(null, "list")}></i>
       </div>
       </div>
     </section>

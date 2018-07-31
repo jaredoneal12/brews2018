@@ -9,7 +9,7 @@ webpackJsonp([0],{
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-var beerData = [{ beerName: 'IPA', breweryName: 'Good People', beerType: 'IPA', ABV: '7.1', IBU: '75.5', seasonal: 'No', pic: 'good-people.png' }, { beerName: 'Pale', breweryName: 'Good People', beerType: 'IPA', ABV: '7.1', IBU: '75.5', seasonal: 'No', pic: 'james_king.jpg' }, { beerName: 'Brown', breweryName: 'Good People', beerType: 'IPA', ABV: '7.1', IBU: '75.5', seasonal: 'No', pic: 'james_king.jpg' }, { beerName: 'Snakehandler', breweryName: 'Good People', beerType: 'IPA', ABV: '7.1', IBU: '75.5', seasonal: 'No', pic: 'james_king.jpg' }, { beerName: 'Coffe Oatmeal Stout', breweryName: 'Good People', beerType: 'IPA', ABV: '7.1', IBU: '75.5', seasonal: 'No', pic: 'james_king.jpg' }, { beerName: 'Bearded Lady', breweryName: 'Good People', beerType: 'IPA', ABV: '7.1', IBU: '75.5', seasonal: 'No', pic: 'james_king.jpg' }, { beerName: 'Urban Farmer', breweryName: 'Good People', beerType: 'IPA', ABV: '7.1', IBU: '75.5', seasonal: 'No', pic: 'james_king.jpg' }, { beerName: 'Muchacho', breweryName: 'Good People', beerType: 'IPA', ABV: '7.1', IBU: '75.5', seasonal: 'No', pic: 'james_king.jpg' }, { beerName: 'JUCO', breweryName: 'Good People', beerType: 'IPA', ABV: '7.1', IBU: '75.5', seasonal: 'No', pic: 'james_king.jpg' }, { beerName: 'Hitchhiker', breweryName: 'Good People', beerType: 'IPA', ABV: '7.1', IBU: '75.5', seasonal: 'No', pic: 'james_king.jpg' }, { beerName: 'Mumbai Rye', breweryName: 'Good People', beerType: 'IPA', ABV: '7.1', IBU: '75.5', seasonal: 'No', pic: 'james_king.jpg' }, { beerName: 'Denim Downhiller', breweryName: 'Good People', beerType: 'Brown' }, { beerName: 'IPA', breweryName: 'TrimTab', beerType: 'IPA', ABV: '6.5', IBU: '61', seasonal: 'No', pic: 'james_king.jpg' }, { beerName: 'Pillar to Post Rye Brown', breweryName: 'TrimTab', beerType: 'Brown', ABV: '5.5', IBU: '41', seasonal: 'No', pic: 'james_king.jpg' }, { beerName: 'Rescue Ship Pale Ale', breweryName: 'TrimTab', beerType: 'Pale', ABV: '5.5', IBU: '18', seasonal: 'yes', pic: 'james_king.jpg' }, { beerName: 'Imperial City Olde Ale', breweryName: 'TrimTab', beerType: 'English Ale', ABV: '7.3', IBU: '55.5', seasonal: 'Yes', pic: 'james_king.jpg' }, { beerName: 'Bankston 88', breweryName: 'TrimTab', beerType: 'Belgian', ABV: '4.5', IBU: '31', seasonal: 'Yes', pic: 'james_king.jpg' }, { beerName: 'Raspberry Berliner Weisse', breweryName: 'TrimTab', beerType: 'Berliner Weisse', ABV: '5.2', IBU: '7', seasonal: 'No', pic: 'james_king.jpg' }, { beerName: 'Craft Lager', breweryName: 'Ghost Train', beerType: 'IPA', ABV: '7.1', IBU: '75.5', seasonal: 'No', pic: 'james_king.jpg' }, { beerName: 'Go-Devil Golden Ale', breweryName: 'Ghost Train', beerType: 'IPA', ABV: '7.1', IBU: '75.5', seasonal: 'No', pic: 'james_king.jpg' }, { beerName: 'Terminal Station Brown Ale', breweryName: 'Ghost Train', beerType: 'IPA', ABV: '7.1', IBU: '75.5', seasonal: 'No', pic: 'james_king.jpg' }, { beerName: 'Switchmans Stash IPL', breweryName: 'Ghost Train', beerType: 'IPA', ABV: '7.1', IBU: '75.5', seasonal: 'No', pic: 'james_king.jpg' }, { beerName: 'Kaleidoscope Kettle Sour', breweryName: 'Ghost Train', beerType: 'IPA', ABV: '7.1', IBU: '75.5', seasonal: 'No', pic: 'james_king.jpg' }, { beerName: 'Spring Street Saison', breweryName: 'Avondale', beerType: 'Belgian', ABV: '7.2', IBU: '18', seasonal: 'No', pic: 'james_king.jpg' }, { beerName: 'Miss Fancys Tripel', breweryName: 'Avondale', beerType: 'Belgian', ABV: '9.2', IBU: '20', seasonal: 'No', pic: 'james_king.jpg' }, { beerName: 'Battlefield IPA', breweryName: 'Avondale', beerType: 'IPA', ABV: '6.8', IBU: '62', seasonal: 'No', pic: 'james_king.jpg' }, { beerName: 'Vanillaphant Porter', breweryName: 'Avondale', beerType: 'Porter', ABV: '6.2', IBU: '25', seasonal: 'No', pic: 'james_king.jpg' }, { beerName: 'Mill City White', breweryName: 'Avondale', beerType: 'Belgian', ABV: '5', IBU: '16', seasonal: 'No', pic: 'james_king.jpg' }, { beerName: 'Train Hopper', breweryName: 'Avondale', beerType: 'Pale', ABV: '5.5', IBU: '50', seasonal: 'No', pic: 'james_king.jpg' }, { beerName: 'Streetcar', breweryName: 'Avondale', beerType: 'Kolsch', ABV: '4.3', IBU: '22', seasonal: 'No', pic: 'james_king.jpg' }, { beerName: 'No Joka Mocha', breweryName: 'Avondale', beerType: 'Stout', ABV: '7.2', IBU: '21', seasonal: 'No', pic: 'james_king.jpg' }, { beerName: 'IPA', breweryName: 'Avondale', beerType: 'IPA', ABV: '7.1', IBU: '75.5', seasonal: 'No', pic: 'james_king.jpg' }, { beerName: 'IPA', breweryName: 'Avondale', beerType: 'IPA', ABV: '7.1', IBU: '75.5', seasonal: 'No', pic: 'james_king.jpg' }];
+var beerData = [{ beerName: 'IPA', breweryName: 'Good People', beerType: 'IPA', ABV: 7.1, IBU: 75.5, seasonal: 'No' }, { beerName: 'Pale', breweryName: 'Good People', beerType: 'Pale', ABV: 5.8, IBU: 37.5, seasonal: 'No' }, { beerName: 'Brown', breweryName: 'Good People', beerType: 'Brown', ABV: 5.4, IBU: 31, seasonal: 'No' }, { beerName: 'Snakehandler', breweryName: 'Good People', beerType: 'Double IPA', ABV: 10, IBU: 100, seasonal: 'No' }, { beerName: 'Coffe Oatmeal Stout', breweryName: 'Good People', beerType: 'IPA', ABV: 7.1, IBU: 75.5, seasonal: 'No' }, { beerName: 'Bearded Lady', breweryName: 'Good People', beerType: 'Wheat', ABV: 4.2, IBU: 13.3, seasonal: 'No' }, { beerName: 'Urban Farmer', breweryName: 'Good People', beerType: 'Belgian', ABV: 5.6, IBU: 15, seasonal: 'No' }, { beerName: 'Muchacho', breweryName: 'Good People', beerType: 'Lager', ABV: 4.8, IBU: 18, seasonal: 'No' }, { beerName: 'JUCO', breweryName: 'Good People', beerType: 'Session IPA', ABV: 4.2, IBU: 45, seasonal: 'No' }, { beerName: 'Hitchhiker', breweryName: 'Good People', beerType: 'IPA', ABV: 7.8, IBU: 100, seasonal: 'No' }, { beerName: 'Mumbai Rye', breweryName: 'Good People', beerType: 'IPA', ABV: 7.4, IBU: 71.9, seasonal: 'No' }, { beerName: 'Denim Downhiller', breweryName: 'Good People', beerType: 'Brown', ABV: 5.3, IBU: 25 }, { beerName: 'IPA', breweryName: 'TrimTab', beerType: 'IPA', ABV: 6.5, IBU: 61, seasonal: 'No' }, { beerName: 'Pillar to Post Rye Brown', breweryName: 'TrimTab', beerType: 'Brown', ABV: 5.5, IBU: 41, seasonal: 'No' }, { beerName: 'Rescue Ship Pale Ale', breweryName: 'TrimTab', beerType: 'Pale', ABV: 5.5, IBU: 18, seasonal: 'yes' }, { beerName: 'Imperial City Olde Ale', breweryName: 'TrimTab', beerType: 'English Ale', ABV: 7.3, IBU: 55.5, seasonal: 'Yes' }, { beerName: 'Bankston 88', breweryName: 'TrimTab', beerType: 'Belgian', ABV: 4.5, IBU: 31, seasonal: 'Yes' }, { beerName: 'Raspberry Berliner Weisse', breweryName: 'TrimTab', beerType: 'Sour', ABV: 5.2, IBU: 7, seasonal: 'No' }, { beerName: 'Craft Lager', breweryName: 'Ghost Train', beerType: 'Lager', ABV: 4.5, IBU: 19, seasonal: 'No' }, { beerName: 'Go-Devil Golden Ale', breweryName: 'Ghost Train', beerType: 'Blonde', ABV: 4.9, IBU: 26, seasonal: 'No' }, { beerName: 'Terminal Station Brown Ale', breweryName: 'Ghost Train', beerType: 'Brown', ABV: 4.5, IBU: 22, seasonal: 'No' }, { beerName: 'Switchmans Stash IPL', breweryName: 'Ghost Train', beerType: 'IPL', ABV: 6.9, IBU: 72, seasonal: 'No' }, { beerName: 'Kaleidoscope Kettle Sour', breweryName: 'Ghost Train', beerType: 'Sour', ABV: 7.1, IBU: 75.5, seasonal: 'No' }, { beerName: 'Spring Street Saison', breweryName: 'Avondale', beerType: 'Belgian', ABV: 7.2, IBU: 18, seasonal: 'No' }, { beerName: 'Miss Fancys Tripel', breweryName: 'Avondale', beerType: 'Belgian', ABV: 9.2, IBU: 20, seasonal: 'No' }, { beerName: 'Battlefield IPA', breweryName: 'Avondale', beerType: 'IPA', ABV: 6.8, IBU: 62, seasonal: 'No' }, { beerName: 'Vanillaphant Porter', breweryName: 'Avondale', beerType: 'Porter', ABV: 6.2, IBU: 25, seasonal: 'No' }, { beerName: 'Mill City White', breweryName: 'Avondale', beerType: 'Belgian', ABV: 5, IBU: 16, seasonal: 'No' }, { beerName: 'Train Hopper', breweryName: 'Avondale', beerType: 'Pale', ABV: 5.5, IBU: 50, seasonal: 'No' }, { beerName: 'Streetcar', breweryName: 'Avondale', beerType: 'Kolsch', ABV: 4.3, IBU: 22, seasonal: 'No' }, { beerName: 'No Joka Mocha', breweryName: 'Avondale', beerType: 'Stout', ABV: 7.2, IBU: 21, seasonal: 'No' }, { beerName: 'IPA', breweryName: 'Avondale', beerType: 'IPA', ABV: 7.1, IBU: 75.5, seasonal: 'No' }, { beerName: 'American Blonde Ale', breweryName: 'Cahaba', beerType: 'Blonde', ABV: 5.5, IBU: 20, seasonal: 'No' }, { beerName: 'Liquidambar', breweryName: 'Cahaba', beerType: 'Amber', ABV: 5.25, IBU: 51, seasonal: 'No' }, { beerName: 'Oka Uba IPA', breweryName: 'Cahaba', beerType: 'IPA', ABV: 7.5, IBU: 57, seasonal: 'No' }, { beerName: 'Ryezome', breweryName: 'Cahaba', beerType: 'Stout', ABV: 5.8, IBU: 60, seasonal: 'No' }, { beerName: 'White IPA', breweryName: 'Cahaba', beerType: 'IPA', ABV: 6.5, IBU: 51, seasonal: 'No' }, { beerName: 'Fraxinus Maximus', breweryName: 'Cahaba', beerType: 'Double IPA', ABV: 8.5, IBU: 120, seasonal: 'No' }, { beerName: 'Kiwi Kolsch', breweryName: 'Cahaba', beerType: 'Kolsch', ABV: 5.3, IBU: 35, seasonal: 'No' }, { beerName: 'Oktoberfest', breweryName: 'Cahaba', beerType: 'Marzen', ABV: 6.9, IBU: 32, seasonal: 'No' }, { beerName: 'Irish Stout', breweryName: 'Cahaba', beerType: 'Stout', ABV: 4, IBU: 35, seasonal: 'No' }, { beerName: 'IPA', breweryName: 'Cahaba', beerType: 'IPA', ABV: 7.1, IBU: 75.5, seasonal: 'No' }];
 
 exports.default = beerData;
 //https://thereportoftheweek-api.herokuapp.com/reports
@@ -73,17 +73,20 @@ var App = function (_Component) {
       min_abv: 0,
       max_abv: 15,
       min_ibu: 0,
-      max_ibu: 100,
+      max_ibu: 120,
       filteredData: _beerData2.default,
       breweryName: 'All',
       beerType: 'Any',
       populateFormsData: '',
-      sortBy: 'ABV-desc'
+      sortBy: 'ABV-desc',
+      view: 'card',
+      search: ''
 
     };
     _this.change = _this.change.bind(_this);
     _this.filteredData = _this.filteredData.bind(_this);
     _this.populateForms = _this.populateForms.bind(_this);
+    _this.changeView = _this.changeView.bind(_this);
     return _this;
   }
 
@@ -109,7 +112,13 @@ var App = function (_Component) {
 
       this.setState(_defineProperty({}, name, value), function () {
         console.log(_this2.state);
-        _this2.filteredData();
+      });
+    }
+  }, {
+    key: 'changeView',
+    value: function changeView(viewName) {
+      this.setState({
+        view: viewName
       });
     }
   }, {
@@ -118,7 +127,7 @@ var App = function (_Component) {
       var _this3 = this;
 
       var returnedData = this.state.beerData.filter(function (item) {
-        return item.ABV >= _this3.state.min_abv && item.ABV <= _this3.state.max_abv && item.IBU <= _this3.state.max_ibu && item.IBU >= _this3.state.min_ibu;
+        return item.ABV >= _this3.state.min_abv && item.ABV <= _this3.state.max_abv && item.IBU >= _this3.state.min_ibu && item.IBU <= _this3.state.max_ibu;
       });
 
       if (this.state.breweryName != "All") {
@@ -192,7 +201,7 @@ var App = function (_Component) {
           'section',
           { id: 'content' },
           _react2.default.createElement(_Filter2.default, { change: this.change, globalState: this.state, populateAction: this.populateForms }),
-          _react2.default.createElement(_Results2.default, { beerData: this.state.filteredData, change: this.change })
+          _react2.default.createElement(_Results2.default, { beerData: this.state.filteredData, change: this.change, globalState: this.state, changeView: this.changeView })
         )
       );
     }
@@ -243,9 +252,7 @@ var Filter = function (_Component) {
 
     var _this = _possibleConstructorReturn(this, (Filter.__proto__ || Object.getPrototypeOf(Filter)).call(this));
 
-    _this.state = {
-      name: 'Joe'
-    };
+    _this.state = {};
     _this.beerTypes = _this.beerTypes.bind(_this);
     _this.breweryNames = _this.breweryNames.bind(_this);
     return _this;
@@ -388,9 +395,7 @@ var Header = function (_Component) {
 
     var _this = _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).call(this));
 
-    _this.state = {
-      name: 'Joe'
-    };
+    _this.state = {};
     return _this;
   }
 
@@ -403,7 +408,7 @@ var Header = function (_Component) {
         _react2.default.createElement(
           'div',
           { className: 'logo' },
-          'Logo Here'
+          'Birmingham Brews Alot'
         ),
         _react2.default.createElement(
           'nav',
@@ -422,11 +427,6 @@ var Header = function (_Component) {
             'a',
             { href: '#' },
             'Brewery Map'
-          ),
-          _react2.default.createElement(
-            'a',
-            { href: '#', className: 'weekend-btn' },
-            'Birmingham for the Weekend'
           )
         )
       );
@@ -476,9 +476,7 @@ var Results = function (_Component) {
 
     var _this = _possibleConstructorReturn(this, (Results.__proto__ || Object.getPrototypeOf(Results)).call(this));
 
-    _this.state = {
-      name: 'Joe'
-    };
+    _this.state = {};
     _this.loopBeers = _this.loopBeers.bind(_this);
     return _this;
   }
@@ -553,7 +551,7 @@ var Results = function (_Component) {
         _react2.default.createElement(
           'section',
           { className: 'searchBar' },
-          _react2.default.createElement('input', { type: 'text', name: 'search', placeholder: 'Search for a beer' })
+          _react2.default.createElement('input', { type: 'text', name: 'search', placeholder: 'Search for a beer', onChange: this.props.change })
         ),
         _react2.default.createElement(
           'section',
@@ -582,8 +580,8 @@ var Results = function (_Component) {
             _react2.default.createElement(
               'div',
               { className: 'view' },
-              _react2.default.createElement('i', { className: 'fa fa-th-list', 'aria-hidden': 'true' }),
-              _react2.default.createElement('i', { className: 'fa fa-th', 'aria-hidden': 'true' })
+              _react2.default.createElement('i', { className: 'fa fa-th-list', 'aria-hidden': 'true', onClick: this.props.changeView.bind(null, "card") }),
+              _react2.default.createElement('i', { className: 'fa fa-th', 'aria-hidden': 'true', onClick: this.props.changeView.bind(null, "list") })
             )
           )
         ),
