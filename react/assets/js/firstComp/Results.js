@@ -21,6 +21,11 @@ export default class Results extends Component {
     return beerData.map((beer, index) => { 
         return (<div className="col-md-3" key={index}>
         <div className="beer">
+        <div className="beerDetails">
+        <span className="ABVValue">ABV: {beer.ABV}%</span>
+          <span className="IBUValue">IBU: {beer.IBU}</span>
+          <span className="beerType">{beer.beerType}</span>
+          </div>
             <div className="beerImg">
               <img src={"../img/" + beer.breweryName + ".png"} />
           </div>
@@ -31,7 +36,7 @@ export default class Results extends Component {
           </div>
           <div className="stats">
           <span className="ABVValue">ABV: {beer.ABV}%</span>
-          <span className="IBUValue">IBU :{beer.IBU}</span>
+          <span className="IBUValue">IBU: {beer.IBU}</span>
           </div>
           </div>
         </div>

@@ -112,6 +112,7 @@ var App = function (_Component) {
 
       this.setState(_defineProperty({}, name, value), function () {
         console.log(_this2.state);
+        _this2.filteredData();
       });
     }
   }, {
@@ -120,6 +121,7 @@ var App = function (_Component) {
       this.setState({
         view: viewName
       });
+      console.log("view changed");
     }
   }, {
     key: 'filteredData',
@@ -130,13 +132,13 @@ var App = function (_Component) {
         return item.ABV >= _this3.state.min_abv && item.ABV <= _this3.state.max_abv && item.IBU >= _this3.state.min_ibu && item.IBU <= _this3.state.max_ibu;
       });
 
-      if (this.state.breweryName != "All") {
+      if (this.state.breweryName != 'All') {
         returnedData = returnedData.filter(function (item) {
           return item.breweryName == _this3.state.breweryName;
         });
       }
 
-      if (this.state.beerType != "Any") {
+      if (this.state.beerType != 'Any') {
         returnedData = returnedData.filter(function (item) {
           return item.beerType == _this3.state.beerType;
         });
@@ -154,9 +156,30 @@ var App = function (_Component) {
         });
       }
 
+      if (this.state.search != '') {
+        returnedData = returnedData.filter(function (item) {
+          var beerName = item.beerName.toLowerCase();
+          var searchText = _this3.state.search.toLowerCase();
+          var n = beerName.match(searchText);
+
+          var breweryName = item.breweryName.toLowerCase();
+          var searchText = _this3.state.search.toLowerCase();
+          var m = breweryName.match(searchText);
+
+          if (n != null) {
+            return true;
+          }
+          if (m != null) {
+            return true;
+          }
+          console.log("searched");
+        });
+      }
+
       this.setState({
         filteredData: returnedData
       });
+      console.log("data filtered");
     }
   }, {
     key: 'populateForms',
@@ -307,6 +330,11 @@ var Filter = function (_Component) {
           'Filter'
         ),
         _react2.default.createElement(
+          'span',
+          { className: 'title' },
+          'Brewery'
+        ),
+        _react2.default.createElement(
           'select',
           { name: 'breweryName', className: 'filters brewery', onChange: this.props.change },
           _react2.default.createElement(
@@ -315,6 +343,11 @@ var Filter = function (_Component) {
             'All'
           ),
           this.breweryNames()
+        ),
+        _react2.default.createElement(
+          'span',
+          { className: 'title' },
+          'Beer Type'
         ),
         _react2.default.createElement(
           'select',
@@ -500,6 +533,28 @@ var Results = function (_Component) {
             { className: 'beer' },
             _react2.default.createElement(
               'div',
+              { className: 'beerDetails' },
+              _react2.default.createElement(
+                'span',
+                { className: 'ABVValue' },
+                'ABV: ',
+                beer.ABV,
+                '%'
+              ),
+              _react2.default.createElement(
+                'span',
+                { className: 'IBUValue' },
+                'IBU: ',
+                beer.IBU
+              ),
+              _react2.default.createElement(
+                'span',
+                { className: 'beerType' },
+                beer.beerType
+              )
+            ),
+            _react2.default.createElement(
+              'div',
               { className: 'beerImg' },
               _react2.default.createElement('img', { src: "../img/" + beer.breweryName + ".png" })
             ),
@@ -533,7 +588,7 @@ var Results = function (_Component) {
                 _react2.default.createElement(
                   'span',
                   { className: 'IBUValue' },
-                  'IBU :',
+                  'IBU: ',
                   beer.IBU
                 )
               )

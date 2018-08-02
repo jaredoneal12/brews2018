@@ -49,10 +49,12 @@ breweryNames() {
   render () {
     return (<section className="filter">
       <h4>Filter</h4>
+      <span className="title">Brewery</span>
       <select name="breweryName" className="filters brewery" onChange={this.props.change}>
       <option value="All">All</option>
     {this.breweryNames()}
       </select>
+      <span className="title">Beer Type</span>
       <select name="beerType" className="filters beerType" onChange={this.props.change}>
       <option value="Any">Any</option>
       {this.beerTypes()}

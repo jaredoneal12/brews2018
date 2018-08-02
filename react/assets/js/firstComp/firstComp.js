@@ -48,6 +48,7 @@ class App extends Component {
       [name]:value
     }, () => {
       console.log(this.state)
+      this.filteredData()
     })
   }
 
@@ -55,6 +56,7 @@ class App extends Component {
     this.setState({
       view: viewName
     })
+    console.log("view changed")
   }
 
   filteredData(){
@@ -62,37 +64,59 @@ class App extends Component {
    return (item.ABV >= this.state.min_abv && item.ABV <= this.state.max_abv) && (item.IBU >= this.state.min_ibu && item.IBU <= this.state.max_ibu)
  })
 
- if(this.state.breweryName != "All"){
-   returnedData = returnedData.filter((item) =>{
+ if(this.state.breweryName != 'All'){
+   returnedData = returnedData.filter((item) => {
      return item.breweryName == this.state.breweryName
    })
  }
 
- if(this.state.beerType != "Any"){
-  returnedData = returnedData.filter((item) =>{
+ if(this.state.beerType != 'Any'){
+  returnedData = returnedData.filter((item) => {
     return item.beerType == this.state.beerType
   })
 }
 
 if(this.state.sortBy == 'ABV-desc') {
-  returnedData = returnedData.sort((a,b) =>{
+  returnedData = returnedData.sort((a,b) => {
     return a.ABV - b.ABV 
   })
 }
 
 if(this.state.sortBy == 'ABV-asc') {
-  returnedData = returnedData.sort((a,b) =>{
+  returnedData = returnedData.sort((a,b) => {
     return b.ABV - a.ABV 
   })
 }
 
+if(this.state.search !=''){
+  returnedData = returnedData.filter((item) => {
+    var beerName = item.beerName.toLowerCase()
+    var searchText = this.state.search.toLowerCase()
+    var n = beerName.match(searchText)
+
+    var breweryName = item.breweryName.toLowerCase()
+    var searchText = this.state.search.toLowerCase()
+    var m = breweryName.match(searchText)
+
+    
+
+    if(n != null) {
+      return true
+    }
+    if(m !=null){
+      return true
+    }
+    console.log("searched")
+  })
+}
+  
+
  this.setState({
    filteredData: returnedData
  })
-
+ console.log("data filtered")
 }
-
-
+  
 
 populateForms (){
   //beerType
@@ -113,7 +137,6 @@ populateForms (){
   breweryNames = [...breweryNames]
   breweryNames = breweryNames.sort()
   
-
   this.setState({
     populateFormsData: {
       beerTypes,
@@ -124,7 +147,6 @@ populateForms (){
   console.log(this.state)
 }
 )
-
 }
 
   render () {
