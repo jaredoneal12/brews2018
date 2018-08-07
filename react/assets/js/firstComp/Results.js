@@ -8,7 +8,7 @@ export default class Results extends Component {
     this.state = {
       
     }
-    this.loopBeers =this.loopBeers.bind(this)
+    this.loopBeers = this.loopBeers.bind(this)
   }
   loopBeers (){
 

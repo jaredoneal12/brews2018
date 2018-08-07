@@ -1,11 +1,11 @@
 {
-  "name": "CodingPhase-StarterKit",
+  "name": "Brews 2018",
   "version": "1.0.0",
-  "description": "Super Cool Framework",
+  "description": "Beer Test APp",
   "main": "index.js",
-  "author": "joe santos garcia",
+  "author": "Jared O'Neal",
   "license": "MIT",
-  "homepage": "http://rocky.codingphase.com/",
+  "homepage": "http://www.jaredoneal.com",
   "dependencies": {
     "axios": "^0.16.1",
     "babel-core": "^6.24.1",
