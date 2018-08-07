@@ -19,7 +19,6 @@ class App extends Component {
       beerType: 'Any',
       populateFormsData: '',
       sortBy: 'ABV-desc',
-      view: 'card',
       search: ''
 
      
@@ -27,7 +26,7 @@ class App extends Component {
     this.change = this.change.bind(this)
     this.filteredData = this.filteredData.bind(this)
     this.populateForms = this.populateForms.bind(this)
-    this.changeView = this.changeView.bind(this)
+
   }
   componentWillMount(){
 
@@ -52,15 +51,10 @@ class App extends Component {
     })
   }
 
-  changeView(viewName){
-    this.setState({
-      view: viewName
-    })
-    console.log("view changed")
-  }
-
+  
   filteredData(){
- var returnedData = this.state.beerData.filter((item) => {
+ var returnedData = this.state.beerData.
+ filter((item) => {
    return (item.ABV >= this.state.min_abv && item.ABV <= this.state.max_abv) && (item.IBU >= this.state.min_ibu && item.IBU <= this.state.max_ibu)
  })
 
@@ -100,10 +94,7 @@ if(this.state.search !=''){
 
     
 
-    if(n != null) {
-      return true
-    }
-    if(m !=null){
+    if(n != null || m!= null) {
       return true
     }
     console.log("searched")

@@ -146,30 +146,6 @@
         box-shadow: 0px 4px 15px 0px rgba(222,222,222,1);
     }
 
-    .beerDetails{
-        opacity:0;
-        display:block;
-        position:relative;
-        transition: all .6s ease-in-out;
-        top:50px;
-        color:black;
-        z-index: 20;
-
-        .ABVValue{
-            display:block;
-        }
-
-        .IBUValue{
-            display:block;
-        }
-
-        .beerType{display:block;
-        }
-
-        &:hover{
-            opacity:1
-        }
-    }
 
     .beerImg{ 
         // padding:15px;
@@ -205,15 +181,23 @@
 .bottom-info{
     padding:20px;
 
+    .beerName{
+        font-size:1.2rem;
+        display:inline-block;
+        margin-bottom:10px;
+        width:100%;
+        text-align: center;
+    }
+
     .names{
 display:inline-block;
 width:50%;
-    .beerName{
-        font-size:1.2rem;
+    .breweryName{
+        font-size:1rem;
         display:block;
         margin-bottom:10px;
     }
-    .breweryName{
+    .beerType{
         font-size:1rem;
         display:block;
         margin-bottom:10px;
@@ -257,4 +241,21 @@ text-align: center;
           }
       }
 
+  }
+
+  input[type=number]::-webkit-inner-spin-button, 
+  input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+  }
+
+  input[type=number]{
+    display: inline-block;
+    width:45%;
+    margin-right:2.5%;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border:none;
+    font-size:16px;
+    padding:10px;
   }

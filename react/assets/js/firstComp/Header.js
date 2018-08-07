@@ -14,9 +14,7 @@ export default class Header extends Component {
       <div className="logo">Birmingham Brews Alot</div>
 
       <nav>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
-      <a href="#">Brewery Map</a>
+    
       </nav>
 
     </header>)

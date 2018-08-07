@@ -61,13 +61,13 @@ breweryNames() {
       </select>
       <div className="filters ABV">
       <span className="title">ABV</span>
-      <input type="text" name="min_abv" className="minABV" onChange={this.props.change} value={this.props.globalState.min_abv} />
-      <input type="text" name="max_abv" className="maxABV" onChange={this.props.change} value={this.props.globalState.max_abv} />
+      <input type="number" name="min_abv"  className="minABV" onChange={this.props.change} value={this.props.globalState.min_abv} />
+      <input type="number" name="max_abv"  className="maxABV" onChange={this.props.change} value={this.props.globalState.max_abv} />
       </div>
       <div className="filters IBU" onChange={this.props.change}>
       <span className="title">IBU</span>
-      <input type="text" name="min_ibu" className="minIBU" onChange={this.props.change} value={this.props.globalState.min_ibu}/>
-      <input type="text" name="max_ibu" className="maxIBU" onChange={this.props.change} value={this.props.globalState.max_ibu}/>
+      <input type="number" name="min_ibu" className="minIBU" onChange={this.props.change} value={this.props.globalState.min_ibu}/>
+      <input type="number" name="max_ibu" className="maxIBU" onChange={this.props.change} value={this.props.globalState.max_ibu}/>
       </div>
       </section>)
   }

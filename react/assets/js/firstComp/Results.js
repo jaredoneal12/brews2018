@@ -21,18 +21,15 @@ export default class Results extends Component {
     return beerData.map((beer, index) => { 
         return (<div className="col-md-3" key={index}>
         <div className="beer">
-        <div className="beerDetails">
-        <span className="ABVValue">ABV: {beer.ABV}%</span>
-          <span className="IBUValue">IBU: {beer.IBU}</span>
-          <span className="beerType">{beer.beerType}</span>
-          </div>
             <div className="beerImg">
               <img src={"../img/" + beer.breweryName + ".png"} />
           </div>
           <div className="bottom-info">
-            <div className="names">
           <span className="beerName">{beer.beerName}</span>
+            <div className="names">
+      
           <span className="breweryName">{beer.breweryName}</span>
+          <span className="beerType">{beer.beerType}</span>
           </div>
           <div className="stats">
           <span className="ABVValue">ABV: {beer.ABV}%</span>
@@ -52,13 +49,9 @@ export default class Results extends Component {
       <div className="sortOptions">
       <div className="options">
       <select name="sortBy" className="sortBy" onChange={this.props.change}>
-      <option value="ABV-asc">High ABV</option>
       <option value="ABV-desc">Low ABV</option>
+      <option value="ABV-asc">High ABV</option>
       </select>
-      </div>
-      <div className="view">
-      <i className="fa fa-th-list" aria-hidden="true" onClick={this.props.changeView.bind(null, "card")}></i>
-      <i className="fa fa-th" aria-hidden="true" onClick={this.props.changeView.bind(null, "list")}></i>
       </div>
       </div>
     </section>
@@ -67,15 +60,7 @@ export default class Results extends Component {
   {this.loopBeers()}
 
      </section>
-    <section className="pagination">
-    <ul className="paginationNums">
-    <li>Prev</li>
-    <li className="active">1</li>
-    <li>2</li>
-    <li>3</li>
-    <li>Next</li>
-    </ul>
-    </section>
+   
     </section>)
   }
 }

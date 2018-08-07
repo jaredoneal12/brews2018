@@ -79,14 +79,13 @@ var App = function (_Component) {
       beerType: 'Any',
       populateFormsData: '',
       sortBy: 'ABV-desc',
-      view: 'card',
       search: ''
 
     };
     _this.change = _this.change.bind(_this);
     _this.filteredData = _this.filteredData.bind(_this);
     _this.populateForms = _this.populateForms.bind(_this);
-    _this.changeView = _this.changeView.bind(_this);
+
     return _this;
   }
 
@@ -114,14 +113,6 @@ var App = function (_Component) {
         console.log(_this2.state);
         _this2.filteredData();
       });
-    }
-  }, {
-    key: 'changeView',
-    value: function changeView(viewName) {
-      this.setState({
-        view: viewName
-      });
-      console.log("view changed");
     }
   }, {
     key: 'filteredData',
@@ -166,10 +157,7 @@ var App = function (_Component) {
           var searchText = _this3.state.search.toLowerCase();
           var m = breweryName.match(searchText);
 
-          if (n != null) {
-            return true;
-          }
-          if (m != null) {
+          if (n != null || m != null) {
             return true;
           }
           console.log("searched");
@@ -367,8 +355,8 @@ var Filter = function (_Component) {
             { className: 'title' },
             'ABV'
           ),
-          _react2.default.createElement('input', { type: 'text', name: 'min_abv', className: 'minABV', onChange: this.props.change, value: this.props.globalState.min_abv }),
-          _react2.default.createElement('input', { type: 'text', name: 'max_abv', className: 'maxABV', onChange: this.props.change, value: this.props.globalState.max_abv })
+          _react2.default.createElement('input', { type: 'number', name: 'min_abv', className: 'minABV', onChange: this.props.change, value: this.props.globalState.min_abv }),
+          _react2.default.createElement('input', { type: 'number', name: 'max_abv', className: 'maxABV', onChange: this.props.change, value: this.props.globalState.max_abv })
         ),
         _react2.default.createElement(
           'div',
@@ -378,8 +366,8 @@ var Filter = function (_Component) {
             { className: 'title' },
             'IBU'
           ),
-          _react2.default.createElement('input', { type: 'text', name: 'min_ibu', className: 'minIBU', onChange: this.props.change, value: this.props.globalState.min_ibu }),
-          _react2.default.createElement('input', { type: 'text', name: 'max_ibu', className: 'maxIBU', onChange: this.props.change, value: this.props.globalState.max_ibu })
+          _react2.default.createElement('input', { type: 'number', name: 'min_ibu', className: 'minIBU', onChange: this.props.change, value: this.props.globalState.min_ibu }),
+          _react2.default.createElement('input', { type: 'number', name: 'max_ibu', className: 'maxIBU', onChange: this.props.change, value: this.props.globalState.max_ibu })
         )
       );
     }
@@ -443,25 +431,7 @@ var Header = function (_Component) {
           { className: 'logo' },
           'Birmingham Brews Alot'
         ),
-        _react2.default.createElement(
-          'nav',
-          null,
-          _react2.default.createElement(
-            'a',
-            { href: '#' },
-            'About'
-          ),
-          _react2.default.createElement(
-            'a',
-            { href: '#' },
-            'Contact'
-          ),
-          _react2.default.createElement(
-            'a',
-            { href: '#' },
-            'Brewery Map'
-          )
-        )
+        _react2.default.createElement('nav', null)
       );
     }
   }]);
@@ -533,28 +503,6 @@ var Results = function (_Component) {
             { className: 'beer' },
             _react2.default.createElement(
               'div',
-              { className: 'beerDetails' },
-              _react2.default.createElement(
-                'span',
-                { className: 'ABVValue' },
-                'ABV: ',
-                beer.ABV,
-                '%'
-              ),
-              _react2.default.createElement(
-                'span',
-                { className: 'IBUValue' },
-                'IBU: ',
-                beer.IBU
-              ),
-              _react2.default.createElement(
-                'span',
-                { className: 'beerType' },
-                beer.beerType
-              )
-            ),
-            _react2.default.createElement(
-              'div',
               { className: 'beerImg' },
               _react2.default.createElement('img', { src: "../img/" + beer.breweryName + ".png" })
             ),
@@ -562,17 +510,22 @@ var Results = function (_Component) {
               'div',
               { className: 'bottom-info' },
               _react2.default.createElement(
+                'span',
+                { className: 'beerName' },
+                beer.beerName
+              ),
+              _react2.default.createElement(
                 'div',
                 { className: 'names' },
                 _react2.default.createElement(
                   'span',
-                  { className: 'beerName' },
-                  beer.beerName
+                  { className: 'breweryName' },
+                  beer.breweryName
                 ),
                 _react2.default.createElement(
                   'span',
-                  { className: 'breweryName' },
-                  beer.breweryName
+                  { className: 'beerType' },
+                  beer.beerType
                 )
               ),
               _react2.default.createElement(
@@ -622,21 +575,15 @@ var Results = function (_Component) {
                 { name: 'sortBy', className: 'sortBy', onChange: this.props.change },
                 _react2.default.createElement(
                   'option',
-                  { value: 'ABV-asc' },
-                  'High ABV'
+                  { value: 'ABV-desc' },
+                  'Low ABV'
                 ),
                 _react2.default.createElement(
                   'option',
-                  { value: 'ABV-desc' },
-                  'Low ABV'
+                  { value: 'ABV-asc' },
+                  'High ABV'
                 )
               )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'view' },
-              _react2.default.createElement('i', { className: 'fa fa-th-list', 'aria-hidden': 'true', onClick: this.props.changeView.bind(null, "card") }),
-              _react2.default.createElement('i', { className: 'fa fa-th', 'aria-hidden': 'true', onClick: this.props.changeView.bind(null, "list") })
             )
           )
         ),
@@ -644,39 +591,6 @@ var Results = function (_Component) {
           'section',
           { className: 'beerResults' },
           this.loopBeers()
-        ),
-        _react2.default.createElement(
-          'section',
-          { className: 'pagination' },
-          _react2.default.createElement(
-            'ul',
-            { className: 'paginationNums' },
-            _react2.default.createElement(
-              'li',
-              null,
-              'Prev'
-            ),
-            _react2.default.createElement(
-              'li',
-              { className: 'active' },
-              '1'
-            ),
-            _react2.default.createElement(
-              'li',
-              null,
-              '2'
-            ),
-            _react2.default.createElement(
-              'li',
-              null,
-              '3'
-            ),
-            _react2.default.createElement(
-              'li',
-              null,
-              'Next'
-            )
-          )
         )
       );
     }
